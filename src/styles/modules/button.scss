@@ -1,0 +1,25 @@
+@use '../libs/variables' as v;
+
+.button {
+  display: inline-block;
+  background-color: v.$yellow;
+  color: black;
+  padding: 34px 92px;
+  text-transform: uppercase;
+  transition: all .3s;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: 700;
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+@media (max-width: v.$tablet) {
+  .button {
+    padding: 22px 60px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+}
