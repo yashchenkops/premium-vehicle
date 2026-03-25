@@ -7,29 +7,35 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
+// 1. машина
+gsap.fromTo(
+  '.car',
+  { y: '-150%' },
+  {
+    y: '-50%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.scene',
+      start: 'top 100%',
+      end: 'center center',
+      scrub: true,
+    },
+  },
+);
+
+// 2. сцена (pin)
+const sceneTl = gsap.timeline({
   scrollTrigger: {
     trigger: '.scene',
-    start: 'center center', // ВАЖЛИВО
+    start: 'center center',
     end: '+=1200',
     scrub: true,
     pin: true,
   },
 });
 
-tl.to('.car', {
-  top: '50%',
-  y: '-50%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.scene',
-    start: 'top 80%', // як тільки зʼявилась
-    end: 'center center', // поки не дійде до центру
-    scrub: true,
-  },
-});
-
-tl.to('.overlay', {
-  y: '100%',
+// 3. фон
+sceneTl.to('.overlay', {
+  y: '-100%',
   ease: 'none',
 });
