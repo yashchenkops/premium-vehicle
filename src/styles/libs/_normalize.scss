@@ -16,18 +16,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-a,
-span,
-p,
-b,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 600;
+  font-family: v.$font-primary;
 }
 
 a {
@@ -37,14 +26,18 @@ a {
 button {
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
-.page-section {
-  // background-color: v.$bg-primary;
+.header__container {
+  max-width: 1950px;
+  min-width: 320px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-.page-section__inner {
-  max-width: 1195px;
+.section__container {
+  max-width: 1626px;
   min-width: 320px;
   padding: 0 15px;
   margin: 0 auto;

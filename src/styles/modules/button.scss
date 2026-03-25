@@ -1,8 +1,8 @@
-@use '../libs/variables' as v;
+@use '@/styles/libs/variables' as v;
 
 .button {
   display: inline-block;
-  background-color: v.$yellow;
+  background-color: yellow;
   color: black;
   padding: 34px 92px;
   text-transform: uppercase;

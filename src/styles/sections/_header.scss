@@ -1,0 +1,48 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 47px;
+}
+
+.header__burger {
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6.5px;
+  width: 142px;
+  height: 142px;
+  cursor: pointer;
+  z-index: 1;
+
+  span {
+    background-color: black;
+    width: 43px;
+    height: 7px;
+    transition: all 0.3s ease;
+  }
+
+  &.is-active {
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:first-child {
+      transform: translateY(13px) rotate(47deg);
+    }
+
+    span:last-child {
+      transform: translateY(-13px) rotate(-45deg);
+    }
+  }
+}

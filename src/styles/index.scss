@@ -1,5 +1,8 @@
-@use 'libs/variables' as *;
-@use 'libs/normalize' as *;
+@use './libs/variables' as v;
+@use './libs/fonts';
+@use './libs/normalize';
 
-@use 'modules/button' as *;
+@use './modules/button';
 
+@use './sections/header';
+@use './sections/hero'
