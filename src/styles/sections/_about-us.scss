@@ -14,30 +14,24 @@
 
 .bg {
   position: absolute;
-  inset: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/about-bg.png');
   background-position: center 0;
   background-repeat: no-repeat;
-  background-size: 80%;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 60, 0, 0) 0%,
-    rgba(255, 60, 0, 0) 65%,
-    rgba(255, 60, 0, 1) 75%,
-    rgba(255, 60, 0, 1) 100%
-    );
-  will-change: transform;
+  background-size: 84%;
 }
 
 .car {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -150%);
-  width: 20%;
+  translate: -50% -20%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(254, 48, 1, 0) 0%, rgba(254, 48, 1, 0) 5%, rgba(254, 48, 1, 1) 15%, rgba(254, 48, 1, 1) 100%);
 }
