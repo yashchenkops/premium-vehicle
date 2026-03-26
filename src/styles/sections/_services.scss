@@ -1,2 +1,93 @@
 @use '@/styles/libs/variables' as v;
 
+.services {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  overflow: hidden;
+}
+
+.services__title {
+  font-weight: 600;
+  font-size: 100px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+.services__slider-slide {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 100%;
+  border: 4px solid #000;
+  height: auto;
+}
+
+.slide__info {
+  position: relative;
+  border-top: 16px solid #000;
+  border-right: 4px solid #000;
+  padding: 80px 152px 60px 160px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.slide__info-number {
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  font-family: v.$font-secondary;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 2;
+  text-transform: capitalize;
+}
+
+.slide__info-title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.slide__info-message {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 113%;
+}
+
+.slide__aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide__aside-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  height: 280px;
+  border-bottom: 4px solid #000;
+  flex-shrink: 0;
+}
+
+.services__slider-arrows {
+  display: flex;
+  height: 100%;
+}
+
+.services__slider-prev {
+  border-right: 4px solid #000;
+}
+
+.services__slider-prev,
+.services__slider-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 41.5px 15px;
+}
