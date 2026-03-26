@@ -3,16 +3,17 @@
 // background-image: url('/about-bg.png');
 
 .about {
+  position: relative;
   background-color: v.$red;
 }
 
-.scene {
-  height: 100vh;
+.about__animation {
+  height: 650px;
   position: relative;
   overflow: hidden;
 }
 
-.bg {
+.about__animation-bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -22,16 +23,36 @@
   background-size: 84%;
 }
 
-.car {
+.about__animation-car {
   position: absolute;
   left: 50%;
   translate: -50% -20%;
+  width: 300px;
 }
 
-.overlay {
+.about__animation-overlay {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(254, 48, 1, 0) 0%, rgba(254, 48, 1, 0) 5%, rgba(254, 48, 1, 1) 15%, rgba(254, 48, 1, 1) 100%);
+}
+
+.about__info {
+  padding-bottom: 200px;
+}
+
+.about__title {
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about__description {
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 100%;
+  max-width: 885px;
 }
