@@ -10,12 +10,12 @@ export function sectionAboutCarAnimationInit() {
     { y: '-70%' },
     {
       y: '50%',
-      ease: 'none',
+      ease: 'power2.in',
       scrollTrigger: {
         trigger: '.about__animation',
-        start: 'top 50%',
+        start: 'top 70%',
         end: 'center center',
-        scrub: true,
+        scrub: 1.5,
       },
     },
   );
@@ -24,9 +24,9 @@ export function sectionAboutCarAnimationInit() {
   const introTl = gsap.timeline({
     scrollTrigger: {
       trigger: '.about__animation',
-      start: 'top 50%',
-      end: 'top 20%',
-      scrub: true,
+      start: 'top 70%',
+      end: 'top 30%',
+      scrub: 1.5,
     },
   });
 
@@ -34,7 +34,7 @@ export function sectionAboutCarAnimationInit() {
     '.about__animation-overlay',
     {
       y: '80%',
-      ease: 'none',
+      ease: 'power2.in',
     },
     0,
   );
@@ -42,7 +42,7 @@ export function sectionAboutCarAnimationInit() {
     '.about__animation-bg',
     {
       y: '10%',
-      ease: 'none',
+      ease: 'power2.in',
     },
     0,
   );
