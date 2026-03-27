@@ -1,11 +1,18 @@
 export function featuredSlider() {
+  const logosContainer = document.querySelector('.featured__slider-logos');
+  const featuredContainer = document.querySelector('.featured');
   const logos = document.querySelectorAll('.logo');
   const cars = document.querySelectorAll('.car');
-  const container = document.querySelector('.featured');
 
   let activeIndex = 1;
   let autoplayInterval = null;
   const AUTOPLAY_DELAY = 3000;
+
+  let isDragging = false;
+  let startX = 0;
+  let currentX = 0;
+
+  const SWIPE_THRESHOLD = 50;
 
   function updatePositions() {
     const radius = 120;
@@ -39,6 +46,11 @@ export function featuredSlider() {
     updatePositions();
   }
 
+  function prevSlide() {
+    activeIndex = (activeIndex - 1 + logos.length) % logos.length;
+    updatePositions();
+  }
+
   function startAutoplay() {
     stopAutoplay();
     autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
@@ -59,11 +71,46 @@ export function featuredSlider() {
     });
   });
 
-  // hover pause (як у swiper)
-  container.addEventListener('mouseenter', stopAutoplay);
-  container.addEventListener('mouseleave', startAutoplay);
+  logosContainer.addEventListener('mousedown', startDrag);
+  logosContainer.addEventListener('touchstart', startDrag);
 
-  // старт
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('touchmove', onDrag);
+
+  window.addEventListener('mouseup', endDrag);
+  window.addEventListener('touchend', endDrag);
+
+  function startDrag(e) {
+    isDragging = true;
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+    stopAutoplay();
+  }
+
+  function onDrag(e) {
+    if (!isDragging) return;
+    currentX = e.touches ? e.touches[0].clientX : e.clientX;
+  }
+
+  function endDrag() {
+    if (!isDragging) return;
+
+    const delta = currentX - startX;
+
+    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+      if (delta < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+
+    isDragging = false;
+    startAutoplay();
+  }
+
+  featuredContainer.addEventListener('mouseenter', stopAutoplay);
+  featuredContainer.addEventListener('mouseleave', startAutoplay);
+
   updatePositions();
   startAutoplay();
 }
