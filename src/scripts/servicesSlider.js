@@ -1,12 +1,13 @@
 import Swiper from 'swiper';
-import { Navigation, EffectFade } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-export function sliderInit() {
-  const swiper = new Swiper('.services__slider', {
-    modules: [Navigation, EffectFade],
+export function servicesSlider() {
+  const swiper = new Swiper('#servicesSlider', {
+    modules: [Navigation, EffectFade, Autoplay],
+
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
@@ -18,6 +19,11 @@ export function sliderInit() {
     navigation: {
       nextEl: '.services__slider-next',
       prevEl: '.services__slider-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
   });
 }
