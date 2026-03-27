@@ -1,8 +1,8 @@
 export function featuredSlider() {
+  const featuredContainer = document.querySelector('.featured__slider');
   const logosContainer = document.querySelector('.featured__slider-logos');
-  const featuredContainer = document.querySelector('.featured');
-  const logos = document.querySelectorAll('.logo');
-  const cars = document.querySelectorAll('.car');
+  const logos = document.querySelectorAll('.featured__slider-logo');
+  const cars = document.querySelectorAll('.featured__slider-car');
 
   let activeIndex = 1;
   let autoplayInterval = null;
@@ -15,7 +15,7 @@ export function featuredSlider() {
   const SWIPE_THRESHOLD = 50;
 
   function updatePositions() {
-    const radius = 120;
+    const radius = 220;
     const step = 120;
 
     logos.forEach((el, i) => {
@@ -33,11 +33,11 @@ export function featuredSlider() {
         scale(${scale})
       `;
 
-      el.classList.toggle('active', i === activeIndex);
+      el.classList.toggle('is-active', i === activeIndex);
     });
 
     cars.forEach((car, i) => {
-      car.classList.toggle('active', i === activeIndex);
+      car.classList.toggle('is-active', i === activeIndex);
     });
   }
 
