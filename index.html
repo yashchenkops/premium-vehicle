@@ -9,45 +9,46 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
-        <div class="header__wrapper">
-          <div class="header__menu">
-            <button class="header__burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <nav class="header__nav">
-              <ul class="header__nav-ul">
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">Home</a>
-                </li>
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">About Us</a>
-                </li>
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">Services</a>
-                </li>
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">Featured</a>
-                </li>
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">Privacy Policy</a>
-                </li>
-                <li class="header__nav-li">
-                  <a href="#" class="header__nav-link">Terms & Conditions</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <a href="#" class="header__logo">
-            <img src="./logo.svg" alt="" />
-          </a>
+      <div class="header__wrapper">
+        <div class="header__menu">
+          <button class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="header__nav">
+            <ul class="header__nav-ul">
+              <li class="header__nav-li">
+                <a href="#home" class="header__nav-link">Home</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="#about" class="header__nav-link">About Us</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="#services" class="header__nav-link">Services</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="#featured" class="header__nav-link">Featured</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="#contact" class="header__nav-link">Contact us</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="./privacy-policy.pdf" class="header__nav-link" target="_blank">Privacy Policy</a>
+              </li>
+              <li class="header__nav-li">
+                <a href="./terms-and-conditions.pdf" class="header__nav-link" target="_blank">Terms & Conditions</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+        <a href="#" class="header__logo">
+          <img src="./logo.svg" alt="" />
+        </a>
       </div>
     </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="section__container">
           <h1 class="section-title">Premium Vehicle</h1>
           <p class="section-subtitle">Marketing Studio</p>
@@ -82,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__animation">
           <div class="about__animation-bg"></div>
           <div class="about__animation-overlay"></div>
@@ -98,7 +99,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="section__container">
           <h2 class="services__title">Our Services</h2>
           <div class="swiper" id="servicesSlider">
@@ -109,8 +110,9 @@
                     <div class="slide__info-number">01</div>
                     <h3 class="slide__info-title">Digital Advertising</h3>
                     <p class="slide__info-message">
-                      Performance campaigns across Google, Meta, TikTok and LinkedIn. Search • Display • Video • Remarketing • Tracking &
-                      Optimization
+                      Performance campaigns across Google, Meta, TikTok and LinkedIn.
+                      <br />
+                      Search • Display • Video • Remarketing • Tracking & Optimization
                     </p>
                   </div>
                   <div class="slide__aside">
@@ -142,7 +144,9 @@
                     <div class="slide__info-number">02</div>
                     <h3 class="slide__info-title">Social Media Marketing</h3>
                     <p class="slide__info-message">
-                      Organic growth and brand communication. Strategy • Content • Posting • Community Management
+                      Organic growth and brand communication.
+                      <br />
+                      Strategy • Content • Posting • Community Management
                     </p>
                   </div>
                   <div class="slide__aside">
@@ -174,8 +178,9 @@
                     <div class="slide__info-number">03</div>
                     <h3 class="slide__info-title">Creative Production</h3>
                     <p class="slide__info-message">
-                      High-impact video, photo and design. Concepts • Scripts • Video & Photo Shoots • Motion Graphics Premium vehicles can
-                      be featured as visual assets
+                      High-impact video, photo and design.
+                      <br />
+                      Concepts • Scripts • Video & Photo Shoots • Motion Graphics Premium vehicles can be featured as visual assets
                     </p>
                   </div>
                   <div class="slide__aside">
@@ -207,7 +212,9 @@
                     <div class="slide__info-number">04</div>
                     <h3 class="slide__info-title">SEO & Content</h3>
                     <p class="slide__info-message">
-                      Visibility and organic traffic growth. SEO Audit • Keywords • On-Page • Technical SEO • Content
+                      Visibility and organic traffic growth.
+                      <br />
+                      SEO Audit • Keywords • On-Page • Technical SEO • Content
                     </p>
                   </div>
                   <div class="slide__aside">
@@ -239,7 +246,9 @@
                     <div class="slide__info-number">05</div>
                     <h3 class="slide__info-title">Strategy & Analytics</h3>
                     <p class="slide__info-message">
-                      Data-driven planning and reporting. Marketing Strategy • Funnels • Media Planning • GA4 Dashboards
+                      Data-driven planning and reporting.
+                      <br />
+                      Marketing Strategy • Funnels • Media Planning • GA4 Dashboards
                     </p>
                   </div>
                   <div class="slide__aside">
@@ -269,7 +278,7 @@
           </div>
         </div>
       </section>
-      <section class="featured">
+      <section class="featured" id="featured">
         <div class="section__container">
           <h2 class="featured__title">
             Featured Campaign
@@ -305,7 +314,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="section__container">
           <div class="contact__wrapper">
             <div class="contact__sign">
@@ -322,7 +331,7 @@
             </div>
             <form action="#" class="contact__form">
               <div class="contact__form-label">
-                <input type="email" name="email" class="contact__form-input" placeholder="Enter you email"/>
+                <input type="email" name="email" class="contact__form-input" placeholder="Enter you email" required />
               </div>
               <button class="contact__form-button" type="submit">contact us</button>
             </form>
@@ -330,6 +339,37 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__left-logo">
+          <img src="./logo_footer.svg" alt="Logo footer" />
+        </a>
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <p class="footer__left-description">
+              A creative marketing studio specializing in digital advertising, social media, SEO, and premium automotive content. Our
+              vehicles appear only as visual elements in campaigns, supporting powerful storytelling and brand identity.
+            </p>
+          </div>
+          <div class="footer__center">
+            <address class="footer__center-address">
+              <h3 class="footer__center-address-title">Address</h3>
+              <p class="footer__center-address-text">Bravion s. r. o.</p>
+              <p class="footer__center-address-text">Račianska 88 B, 831 02 Bratislava</p>
+              <p class="footer__center-address-text">Identification number (IČO): 56 869 304</p>
+            </address>
+            <div class="footer__center-contact">
+              <h3 class="footer__center-contact-title">Contact Us</h3>
+              <a class="footer__center-contact-link" href="mailto:darin.s.r.o@gmail.com">darin.s.r.o@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer__right">
+            <a href="./privacy-policy.pdf" class="footer__right-link" target="_blank">Privacy Policy</a>
+            <a href="./terms-and-conditions.pdf" class="footer__right-link" target="_blank">Terms & Conditions</a>
+            <a href="#" class="footer__right-link" target="_blank">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
