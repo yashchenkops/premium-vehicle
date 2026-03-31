@@ -38,6 +38,7 @@ export function sectionAboutCarAnimationInit() {
     },
     0,
   );
+  
   introTl.to(
     '.about__animation-bg',
     {

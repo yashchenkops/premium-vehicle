@@ -3,6 +3,20 @@
 .about {
   position: relative;
   background-color: v.$red;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    translate: -50% 0;
+    width: 150%;
+    height: 100%;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(254, 48, 1) 75.74460506439209%, rgb(254, 48, 1) 100%);
+    filter: blur(200px);
+    z-index: -1;
+  }
 }
 
 .about__animation {

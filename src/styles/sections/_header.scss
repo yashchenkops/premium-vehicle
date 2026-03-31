@@ -75,16 +75,8 @@
 }
 
 .header__nav-ul {
-  padding: 92.5px 30px 92.5px 60px;
+  padding: 62.5px 0;
   background-color: black;
-}
-
-.header__nav-li {
-  margin-bottom: 60px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .header__nav-link {
@@ -93,6 +85,7 @@
   font-size: 30px;
   color: #d8d8d8;
   word-wrap: none;
+  padding: 30px 30px 30px 60px;
 
   &:hover {
     color: #858585;

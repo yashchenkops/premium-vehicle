@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-primary;
+  overflow-x: hidden;
 }
 
 a {
