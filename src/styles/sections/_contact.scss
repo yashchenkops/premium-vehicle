@@ -17,37 +17,15 @@
 
 .contact__sign {
   position: relative;
-  text-align: center;
-  flex: 1 0 auto;
-  font-family: 'Rockybilly', cursive;
-  font-size: 80px;
-  line-height: 2;
-  color: black;
-  z-index: 1;
-  scale: 1.1;
+  flex-grow: 1;
+  height: -webkit-fill-available;
 
-  & > p {
-    position: relative;
-
-    &:first-child {
-      top: 10px;
-      left: 17px;
-      rotate: -8deg;
-
-      span {
-        font-size: 30px;
-      }
-    }
-    &:last-child {
-      rotate: -15deg;
-
-      span {
-        position: relative;
-        top: -30px;
-        left: 10px;
-        font-size: 30px;
-      }
-    }
+  & > svg {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    height: 564px;
+    width: 100%;
   }
 }
 
