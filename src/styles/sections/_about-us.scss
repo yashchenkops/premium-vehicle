@@ -10,7 +10,7 @@
     bottom: -50%;
     left: 50%;
     translate: -50% 0;
-    width: 200%;
+    width: 250vw;
     height: 100%;
     border-radius: 100%;
     background: radial-gradient(50% 50% at 50% 50%, rgb(254, 48, 1) 75.74460506439209%, rgb(254, 48, 1) 100%);
@@ -92,5 +92,13 @@
   .about__description {
     font-size: 19px;
     max-width: 350px;
+  }
+
+  .about::after {
+    filter: blur(100px)
+  }
+
+  .about__info {
+    padding-bottom: 80px;
   }
 }
