@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenuOpen();
   sectionAboutCarAnimationInit();
-  // servicesSlider();
+  servicesSlider();
   // featuredSlider();
   AOS.init({
     once: true,
