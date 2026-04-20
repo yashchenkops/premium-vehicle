@@ -6,6 +6,28 @@
   padding-bottom: 200px;
   overflow: hidden;
 
+  .hero__title {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 50%;
+      translate: -50% 0;
+      height: 100%;
+      width: 150%;
+      background: linear-gradient(to right, rgba(254, 48, 1, 0) 0%, rgba(254, 48, 1, 0) 5%, rgb(254, 48, 1) 15%, rgb(254, 48, 1) 100%);
+      animation: heroTitleSlide 5s ease-in-out forwards;
+    }
+
+    @keyframes heroTitleSlide {
+      100% {
+        translate: 50% 0;
+      }
+    }
+  }
+
   .section-title {
     font-size: 200px;
     line-height: 1;
