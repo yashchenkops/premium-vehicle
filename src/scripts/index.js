@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenuOpen();
-  // sectionAboutCarAnimationInit();
+  sectionAboutCarAnimationInit();
   // servicesSlider();
   // featuredSlider();
   AOS.init({

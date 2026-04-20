@@ -10,7 +10,7 @@
     bottom: -50%;
     left: 50%;
     translate: -50% 0;
-    width: 150%;
+    width: 200%;
     height: 100%;
     border-radius: 100%;
     background: radial-gradient(50% 50% at 50% 50%, rgb(254, 48, 1) 75.74460506439209%, rgb(254, 48, 1) 100%);
@@ -37,8 +37,7 @@
 
 .about__animation-car {
   position: absolute;
-  left: 50%;
-  translate: -50% -20%;
+  left: calc(50% - 150px);
   width: 300px;
 }
 
@@ -55,7 +54,7 @@
 }
 
 .about__title {
-  font-size: 100px;
+  font-size: clamp(38px, 10vw, 100px);
   line-height: 1;
   font-weight: 600;
   text-transform: uppercase;
@@ -67,4 +66,31 @@
   font-size: 50px;
   line-height: 100%;
   max-width: 885px;
+}
+
+@media (max-width: 1024px) {
+  .about__title {
+    margin-bottom: 10px;
+  }
+
+  .about__description {
+    font-size: 32px;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__animation {
+    height: 450px;
+  }
+
+  .about__animation-car {
+    width: 200px;
+    left: calc(50% - 100px);
+  }
+
+  .about__description {
+    font-size: 19px;
+    max-width: 350px;
+  }
 }
