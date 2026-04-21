@@ -67,6 +67,11 @@
   }
 }
 
+path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 @media (max-width: 1024px) {
   .contact {
     padding-top: 240px;

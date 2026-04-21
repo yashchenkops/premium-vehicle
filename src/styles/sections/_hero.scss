@@ -94,6 +94,11 @@
   }
 }
 
+path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 @media (max-width: 1024px) {
   .hero {
     padding-top: 170px;
