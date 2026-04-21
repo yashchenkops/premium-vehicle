@@ -13,5 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   featuredSlider();
   AOS.init({
     once: true,
+    duration: 1200,
   });
 });
