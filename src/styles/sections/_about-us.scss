@@ -3,6 +3,7 @@
 .about {
   position: relative;
   background-color: v.$red;
+  overflow-x: clip;
 
   &::after {
     content: '';

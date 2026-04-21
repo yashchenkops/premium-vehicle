@@ -14,8 +14,12 @@ export function featuredSlider() {
 
   const SWIPE_THRESHOLD = 50;
 
+  function getRadius() {
+    return window.innerWidth <= 768 ? 150 : 220;
+  }
+
   function updatePositions() {
-    const radius = 220;
+    const radius = getRadius();
     const step = 120;
 
     logos.forEach((el, i) => {
@@ -97,11 +101,8 @@ export function featuredSlider() {
     const delta = currentX - startX;
 
     if (Math.abs(delta) > SWIPE_THRESHOLD) {
-      if (delta < 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
+      if (delta < 0) nextSlide();
+      else prevSlide();
     }
 
     isDragging = false;
@@ -110,6 +111,12 @@ export function featuredSlider() {
 
   featuredContainer.addEventListener('mouseenter', stopAutoplay);
   featuredContainer.addEventListener('mouseleave', startAutoplay);
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updatePositions, 100);
+  });
 
   updatePositions();
   startAutoplay();

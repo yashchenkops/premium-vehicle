@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerMenuOpen();
   sectionAboutCarAnimationInit();
   servicesSlider();
-  // featuredSlider();
+  featuredSlider();
   AOS.init({
     once: true,
   });
