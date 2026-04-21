@@ -19,10 +19,11 @@
   position: relative;
   flex-grow: 1;
   height: -webkit-fill-available;
+  flex: 1 0 60%;
 
   & > svg {
     position: absolute;
-    top: -80px;
+    top: -120px;
     left: 0;
     height: 564px;
     width: 100%;
@@ -30,7 +31,7 @@
 }
 
 .contact__form {
-  flex: 0 0 626px;
+  flex: 0 1 40%;
   border-left: 4px solid black;
 }
 
@@ -63,5 +64,52 @@
 
   &:hover {
     background-color: #131313;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    padding-top: 240px;
+    padding-bottom: 200px;
+  }
+
+  .contact__form-input {
+    font-size: 24px;
+    padding: 40px;
+  }
+
+  .contact__form-button {
+    font-size: 32px;
+    padding: 40px;
+  }
+
+  .contact__sign > svg {
+    top: 0;
+    height: -webkit-fill-available;
+  }
+
+  .contact__sign {
+    flex: 1 0 40%;
+  }
+
+  .contact__form {
+    flex: 1 0 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+
+  .contact__form-input {
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .contact__form-button {
+    font-size: 12px;
+    padding: 20px;
   }
 }
