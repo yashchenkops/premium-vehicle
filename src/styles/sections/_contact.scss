@@ -117,4 +117,13 @@ path {
     font-size: 12px;
     padding: 20px;
   }
+
+  .contact__sign {
+    height: 100%;
+
+    & > svg {
+      height: auto;
+      margin-top: -40%;
+    }
+  }
 }
